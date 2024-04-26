@@ -4,16 +4,18 @@ window.onload = function () {
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "PrintScreen") {
-      let rightTime = Math.random();
-      let rightPlace = Math.random();
-      let rightMood = Math.random();
+      let mindfulness = Math.random();
+      let insight = Math.random();
+      let intuition = Math.random();
+      let timing = Math.random();
       let luck = Math.random();
 
       if (
-        rightTime > 0.6 &&
-        rightPlace > 0.4 &&
-        rightMood > 0.7 &&
-        luck > 0.8
+        mindfulness > 0.8 &&
+        insight > 0.7 &&
+        intuition > 0.8 &&
+        timing > 0.6 &&
+        luck > 0.5
       ) {
         let jpegUrl = canvas.toDataURL("image/jpeg", 0.9);
         let link = document.createElement("a");
