@@ -18,7 +18,7 @@ window.onload = function () {
         let jpegUrl = canvas.toDataURL("image/jpeg", 0.9);
         let link = document.createElement("a");
         link.href = jpegUrl;
-        link.download = "whatIFeel.jpg";
+        link.download = "mySentiments.jpg";
         link.click();
       }
     }
