@@ -1,35 +1,26 @@
 window.onload = function () {
   const world = document.getElementById("world");
-  const myView = world.closest(".myEye");
+  const canvas = world.closest(".myEye");
 
-  myView.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "PrintScreen") {
-      const randomNum = Math.random();
+      let rightTime = Math.random();
+      let rightPlace = Math.random();
+      let rightMood = Math.random();
+      let luck = Math.random();
 
-      if (randomNum < 0.5) {
-        element.blur();
-      } else {
-        element.focus();
+      if (
+        rightTime > 0.6 &&
+        rightPlace > 0.4 &&
+        rightMood > 0.7 &&
+        luck > 0.8
+      ) {
+        let jpegUrl = canvas.toDataURL("image/jpeg", 0.9);
+        let link = document.createElement("a");
+        link.href = jpegUrl;
+        link.download = "whatIFeel.jpg";
+        link.click();
       }
     }
   });
 };
-// var canvas = document.createElement('canvas');
-// var ctx = canvas.getContext('2d');
-
-// // 設置 canvas 的尺寸
-// canvas.width = 800;
-// canvas.height = 600;
-
-// // 畫一些內容到 canvas（這裡只是一個例子）
-// ctx.fillStyle = 'red';
-// ctx.fillRect(10, 10, 100, 50);
-
-// // 轉換為 JPG
-// var imageUrl = canvas.toDataURL('image/jpeg');
-
-// // 下載圖像
-// var link = document.createElement('a');
-// link.href = imageUrl;
-// link.download = 'example.jpg';
-// link.click();
